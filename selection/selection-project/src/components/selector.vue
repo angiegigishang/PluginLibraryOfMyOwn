@@ -7,10 +7,11 @@
           选择
     </div>
     <div class="wrap-content">
+
       <div class="gongdan" @click="test2">
         选项
-        <input class="gd_input" placeholder="请选择" @click="change">
-        <select-sxy :data='moredata' v-show="true"></select-sxy>
+        <input class="gd_input" placeholder="请选择" @click="change()">
+        <select-sxy :data='moredata' v-show="changes"></select-sxy>
       </div>
       
       <div class="shebei"></div>
@@ -45,12 +46,12 @@ export default{
       console.log(this.moredata)
     },
     change () {
-      let changes = !changes
-      console.log(changes)
+      this.changes = !this.changes
     }
   },
   mounted () {
     console.log(this.moredata)
+    console.log('1',this.changes)
   }
 }
 </script>
