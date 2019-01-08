@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div @click="test" v-for="(item,index) in data">
+		<div  v-for="(item,index) in data" @click="test(index)">
 			测试
 			{{item}}
 		</div>
@@ -13,8 +13,9 @@ export default {
 		data: Array
 	},
 	methods: {
-		test () {
-			console.log(this.data)
+		test (index) {
+			console.log('111')
+			this.$emit('onchange', '测试' + this.data[index])
 		}
 	}
 }

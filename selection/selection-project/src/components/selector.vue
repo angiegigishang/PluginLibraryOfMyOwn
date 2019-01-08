@@ -10,8 +10,14 @@
 
       <div class="gongdan" @click="test2">
         选项
-        <input class="gd_input" placeholder="请选择" @click="change()">
-        <select-sxy :data='moredata' v-show="changes"></select-sxy>
+        <input class="gd_input" 
+               placeholder="请选择" 
+               @click="change()"
+               v-model="val"
+               >
+        <select-sxy  @onchange="test" 
+                     :data='moredata' 
+                     v-show="changes"></select-sxy>
       </div>
       
       <div class="shebei"></div>
@@ -29,7 +35,8 @@ export default{
   data () {
     return {
       datas:[1,2,3,4,5],
-      changes: false
+      changes: false,
+      val: []
     }
   },
   computed: {
@@ -43,14 +50,17 @@ export default{
     },
   methods: {
     test2 () {
-      console.log(this.moredata)
+      //console.log(this.moredata)
     },
     change () {
       this.changes = !this.changes
+    },
+    test (key) {
+      this.val = key
     }
   },
   mounted () {
-    console.log(this.moredata)
+    //console.log(this.moredata)
     console.log('1',this.changes)
   }
 }
