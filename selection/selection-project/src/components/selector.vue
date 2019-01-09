@@ -57,6 +57,7 @@ export default{
     },
     test (key) {
       this.val = key
+      this.changes = false
     }
   },
   mounted () {
@@ -67,8 +68,20 @@ export default{
 </script>
 
 <style scoped>
+  * {
+    padding: 0;
+    margin: 0;
+  }
   .header{
     position: relative;
+    display: inline-block;
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: center;
+   /* position: relative;
     display: inline-block;
     height: 1.3rem;
     line-height: 1.3rem;
@@ -77,18 +90,19 @@ export default{
     text-align: center;
     vertical-align: center;
     color: #000;
-    font-size: 0.4rem;
+    font-size: 0.4rem;*/
   }
   .back {
     display: inline-block;
+   /* display: inline-block;
     position: absolute;
     left: 0.2rem;
     font-size: 0.5rem;
     text-align: center;
-    color: #101010;
+    color: #101010;*/
   }
   .gongdan {
-    position: relative;
-    margin: 10px auto;
+    /*position: relative;
+    margin: 10px auto;*/
   }
 </style>
