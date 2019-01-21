@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div  v-for="(item,index) in data" @click="test(index)">
+		<div  v-for="(item,index) in data" @click="test(index)" class="select-item">
 			测试
 			{{item}}
 		</div>
@@ -21,4 +21,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+	.select-item {
+		
+	}
+</style>

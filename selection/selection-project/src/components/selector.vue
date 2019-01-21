@@ -17,7 +17,8 @@
                >
         <select-sxy  @onchange="test" 
                      :data='moredata' 
-                     v-show="changes"></select-sxy>
+                     v-show="changes"
+                     class="select-item"></select-sxy>
       </div>
       
       <div class="shebei"></div>
@@ -81,28 +82,33 @@ export default{
     line-height: 50px;
     text-align: center;
     vertical-align: center;
-   /* position: relative;
-    display: inline-block;
-    height: 1.3rem;
-    line-height: 1.3rem;
-    width: 100%;
-    background-color: #e6e6e6;
-    text-align: center;
-    vertical-align: center;
-    color: #000;
-    font-size: 0.4rem;*/
   }
   .back {
     display: inline-block;
-   /* display: inline-block;
-    position: absolute;
-    left: 0.2rem;
-    font-size: 0.5rem;
-    text-align: center;
-    color: #101010;*/
+    float: left;
+    margin-left: 10px;
   }
   .gongdan {
-    /*position: relative;
-    margin: 10px auto;*/
+    left: 17%;
+    margin-top: 10px;
+    position: relative;
+    width: 200px;
+  }
+
+  .gd_input {
+    position: absolute;
+    width: 100%;
+    margin-left: 10px;
+    outline: none;
+  }
+  .select-item {
+    border: solid 0.5px;
+    position: absolute;
+    width: 100%;
+    left: 17%;
+    margin-left: 10px;
+  }
+  .text {
+    margin-right: 20px;
   }
 </style>
